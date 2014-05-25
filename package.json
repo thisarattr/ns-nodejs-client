@@ -1,0 +1,27 @@
+{
+  "name": "ns-nodejs-client",
+  "version": "0.0.1",
+  "description": "A small library to access to RedMart notification service.",
+  "main": "ns-client.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Redmart/Miscellaneous.git"
+  },
+  "keywords": [
+    "notification",
+    "client"
+  ],
+  "author": "Thisara Rupasinghe <thisarattr@gmail.com>",
+  "license": "private",
+  "bugs": {
+    "url": "https://github.com/Redmart/Miscellaneous/issues"
+  },
+  "homepage": "https://github.com/Redmart/Miscellaneous",
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "mocha": "^1.19.0"
+  }
+}
