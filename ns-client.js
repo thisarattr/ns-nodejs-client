@@ -1,21 +1,9 @@
 var http = require('http');
 
-exports.env = {
-  prod  : "ns.admin.redmart.com",
-  alpha : "dev.ns.admin.redmart.com",
-  local  : "localhost"
-};
-
 var accessKey = "OXh3aVVnQm5UT0YwOVlZVTd0cTlUU0RGR0hNK0hFS1FwZG8xK1NJRGh1Z2tGbEMw";
 var path = "/api/v1/notifications/send";
 
 module.exports = {
-  
-  define({
-    PROD: "ns.admin.redmart.com",
-    APLHA: "dev.ns.admin.redmart.com",
-    LOCAL: "localhost"
-  });
 
   sendNotification: function(hostEnv, notification){
 
@@ -25,8 +13,8 @@ module.exports = {
     };
 
     var options = {
-      host: hostEnv,
-      port: 80,
+      host: hostEnv.host,
+      port: hostEnv.port,
       path: path,
       method: 'POST',
       headers: header
@@ -49,6 +37,21 @@ module.exports = {
         console.log('error: ' + err);
     });
 
+  }
+  
+  env: function(env){
+    
+    var val;
+    
+    if(env.toLowerCase()=='prod'){
+      val = { host: "ns.admin.redmart.com", port: 80}
+    }else if(env.toLowerCase()=='alpha'){
+      val = { host: "dev.ns.admin.redmart.com", port: 80}
+    }else if(env.toLowerCase()=='local'){
+      val = { host: "localhost", port: "9030"}
+    }
+    
+    return val;
   }
 
 };
