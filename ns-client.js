@@ -10,12 +10,6 @@ var accessKey = "OXh3aVVnQm5UT0YwOVlZVTd0cTlUU0RGR0hNK0hFS1FwZG8xK1NJRGh1Z2tGbEM
 var path = "/api/v1/notifications/send";
 
 module.exports = {
-  
-  var env = {
-    prod  : "ns.admin.redmart.com",
-    alpha : "dev.ns.admin.redmart.com",
-    local  : "localhost"
-  };
 
   sendNotification: function(hostEnv, notification){
 
