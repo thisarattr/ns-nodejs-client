@@ -37,7 +37,7 @@ module.exports = {
         console.log('error: ' + err);
     });
 
-  }
+  },
   
   env: function(env){
     
