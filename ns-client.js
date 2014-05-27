@@ -1,6 +1,6 @@
 var http = require('http');
 
-var env = {
+exports.env = {
   prod  : "ns.admin.redmart.com",
   alpha : "dev.ns.admin.redmart.com",
   local  : "localhost"
