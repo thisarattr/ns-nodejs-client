@@ -1,4 +1,4 @@
-require('http');
+var http = require('http');
 
 var env = {
   prod  : "http://ns.admin.redmart.com",
