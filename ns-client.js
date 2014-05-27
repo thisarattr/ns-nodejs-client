@@ -1,9 +1,9 @@
 var http = require('http');
 
 var env = {
-  prod  : "http://ns.admin.redmart.com",
-  alpha : "http://dev.ns.admin.redmart.com",
-  local  : "http://localhost"
+  prod  : "ns.admin.redmart.com",
+  alpha : "dev.ns.admin.redmart.com",
+  local  : "localhost"
 };
 
 var accessKey = "OXh3aVVnQm5UT0YwOVlZVTd0cTlUU0RGR0hNK0hFS1FwZG8xK1NJRGh1Z2tGbEMw";
@@ -20,7 +20,7 @@ module.exports = {
 
     var options = {
       host: hostEnv,
-      port: 80,
+      port: 9030,
       path: path,
       method: 'POST',
       headers: header
