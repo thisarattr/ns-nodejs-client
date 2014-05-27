@@ -14,8 +14,8 @@ module.exports = {
   sendNotification: function(hostEnv, notification){
 
     var header = {
-        Content-Type: "application/json",
-        access-Key: accessKey
+        "Content-Type": "application/json",
+        "access-Key": accessKey
     };
 
     var options = {
