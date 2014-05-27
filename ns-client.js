@@ -6,16 +6,16 @@ exports.env = {
   local  : "localhost"
 };
 
-define({
-    PROD: "ns.admin.redmart.com",
-    APLHA: "dev.ns.admin.redmart.com",
-    LOCAL: "localhost"
-});
-
 var accessKey = "OXh3aVVnQm5UT0YwOVlZVTd0cTlUU0RGR0hNK0hFS1FwZG8xK1NJRGh1Z2tGbEMw";
 var path = "/api/v1/notifications/send";
 
 module.exports = {
+  
+  define({
+    PROD: "ns.admin.redmart.com",
+    APLHA: "dev.ns.admin.redmart.com",
+    LOCAL: "localhost"
+  });
 
   sendNotification: function(hostEnv, notification){
 
