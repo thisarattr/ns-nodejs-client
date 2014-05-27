@@ -48,7 +48,7 @@ module.exports = {
     }else if(env.toLowerCase()=='alpha'){
       val = { host: "dev.ns.admin.redmart.com", port: 80}
     }else if(env.toLowerCase()=='local'){
-      val = { host: "localhost", port: "9030"}
+      val = { host: "localhost", port: 9010}
     }
     
     return val;
